@@ -151,7 +151,7 @@ class TestAPIHandlers(AsyncHTTPTestCase, testing_utils.TestingWithDBBaseClass):
 
         url = '/users/login'
         # happy path
-        post_data = {'username': 't_username', 'password': 'bad_password'}
+        post_data = {'username': 't_username', 'password': 't_password'}
         response = self._post_data_to_url(url, post_data)
         assert response.code == 200
         json_data = json.loads(response.body)
